@@ -1,0 +1,39 @@
+# Dependencies and package-manager caches
+node_modules/
+.pnpm-store/
+.npm/
+
+# Build outputs, generated bindings, and coverage
+dist/
+coverage/
+coverage.json
+.nyc_output/
+*.tsbuildinfo
+/artifacts/
+/cache/
+/typechain-types/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+
+# Local Hardhat deployments and upgrade manifests
+/deployments/hardhat.json
+/deployments/localhost.json
+/.openzeppelin/unknown-31337.json
+/.openzeppelin/unknown-1337.json
+
+# Logs, editor state, and OS files
+logs/
+*.log
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
