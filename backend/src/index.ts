@@ -40,7 +40,7 @@ app.use(errorHandler);
 
 async function bootstrap() {
   await connectMongo();
-  await connectRedis().catch(() => undefined);
+  void connectRedis().catch(() => undefined);
   startIndexer();
   app.listen(port, () => {
     console.info(`BSREMS Pro API listening on ${port}`);

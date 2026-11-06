@@ -42,7 +42,7 @@ Hardhat listens at `http://127.0.0.1:8545` on chain ID `31337`. Deployment write
 
 ### API and frontend
 
-Start MongoDB and Redis locally. The API defaults to MongoDB at `mongodb://127.0.0.1:27017/bsrems_pro` and Redis at `redis://127.0.0.1:6379`.
+Start MongoDB locally. The API defaults to `mongodb://127.0.0.1:27017/bsrems_pro`. Redis is optional and defaults to `redis://127.0.0.1:6379`. When the cache is unavailable, the API reads statistics directly from MongoDB. Restart the API after restoring Redis to reconnect the cache.
 
 Create `backend/.env` with a unique `JWT_SECRET`, `SEPOLIA_RPC_URL=http://127.0.0.1:8545` (the backend also uses this setting for local RPC), and `PROPERTY_REGISTRY_ADDRESS` set to the deployed registry address. Set `MONGODB_URI` and `REDIS_URL` if your services use different connection settings. For development without Pinata, leave `PINATA_JWT` unset to use placeholder IDs.
 
